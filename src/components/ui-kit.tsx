@@ -28,7 +28,7 @@ const statusCls: Record<string, string> = {
   Completed: "bg-muted text-muted-foreground border-border",
 };
 export function StatusBadge({ status }: { status: string }) {
-  return <span className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${statusCls[status] ?? statusCls.Completed}`}>{status === "Live" && <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-destructive" />}{status}</span>;
+  return <span className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${statusCls[status] ?? statusCls["Completed"]}`}>{status === "Live" && <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-destructive" />}{status}</span>;
 }
 export function Tag({ children }: { children: ReactNode }) {
   return <span className="rounded-full border border-primary/40 bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary-foreground">{children}</span>;
