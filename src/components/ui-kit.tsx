@@ -43,7 +43,7 @@ export function Cover({ hue, label, className = "" }: { hue: number; label: stri
   );
 }
 
-export function Avatar({ label, hue = 280, size = "h-12 w-12" }: { label: string; hue?: number; size?: string }) {
+export function Avatar({ label, hue = 280, size = "h-12 w-12" }: { label: string; hue?: number | undefined; size?: string }) {
   return <div aria-hidden className={`${size} flex shrink-0 items-center justify-center rounded-lg font-display text-sm font-bold`} style={{ background: `linear-gradient(135deg, oklch(0.5 0.2 ${hue}), oklch(0.3 0.1 ${hue + 40}))` }}>{label.slice(0, 3).toUpperCase()}</div>;
 }
 
